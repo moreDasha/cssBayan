@@ -45,6 +45,12 @@ body {
     width: 75%;
 }
 
+.accordion-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .accordion-title-wrap {
     width: 100%;
     padding: 1.09rem 0;
@@ -73,15 +79,65 @@ svg {
     stroke-linecap: round;
     stroke-linejoin: round;
 }
-
-.accordion-meme {
-    padding: 1.2rem 0;
-    display: flex;
-    justify-content: center;
+.accordion-input{
+    appearance: none;
 }
 
-img {
+.img {
+    width: 0;
+    height: 0;
+    transition: all 0.4s ease-in-out
+}
+
+.accordion-input:checked ~ .img {
     width: 35%;
+    height: 100%;
     border-radius: 20px;
+    margin: 1.2rem 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.footer-title {
+    font-family: 'Roboto Bolt';
+    font-size: 1.7rem;
+    color: #29416c;
+}
+
+.icon-box {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.icon-item {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100px;
+    border: 1px solid #29416c;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.icon-item:last-child {
+    margin-right: 0;
+}
+
+.icon-item-link {
+    text-decoration: none;
+    color: #29416c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (any-hover: hover) {
+    .accordion-item:hover .img {
+        width: 35%;
+        height: 100%;
+        border-radius: 20px;
+        margin: 1.2rem 0;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
 }
