@@ -38,7 +38,7 @@ body {
 .main {
     font-family: 'Roboto Regular';
     font-size: 0.875rem;
-    color: #4b447e;
+    color: #737294;
 }
 
 .accordion-wrap {
@@ -54,30 +54,34 @@ body {
 .accordion-title-wrap {
     width: 100%;
     padding: 1.09rem 0;
-    border-bottom: 1px solid #4b447e;
+    border-bottom: 1px solid #737294;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.4s ease-in-out
 }
 
 .accordion-title {
     margin: 0;
+    transition: all 0.4s ease-in-out
 }
 
 .acoordion-button {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.4s ease-in-out
 }
 
 svg {
     width: 1.53rem;
     height: 1.53rem;
     fill: none;
-    stroke: #4b447e;
+    stroke: #737294;
     stroke-width: 0.37rem;
     stroke-linecap: round;
     stroke-linejoin: round;
+    transition: all 0.4s ease-in-out
 }
 .accordion-input{
     appearance: none;
@@ -95,6 +99,9 @@ svg {
     border-radius: 20px;
     margin: 1.2rem 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.accordion-input:checked ~ .accordion-title-wrap .acoordion-button {
+    transform: rotate(180deg);
 }
 
 .footer-title {
@@ -119,6 +126,7 @@ svg {
     justify-content: center;
     align-items: center;
     font-size: 2rem;
+    transition: all 0.4s ease-in-out
 }
 .icon-item:last-child {
     margin-right: 0;
@@ -130,14 +138,39 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.4s ease-in-out
 }
 
 @media (any-hover: hover) {
+    .accordion-wrap:hover {
+        cursor: pointer;
+    }
+    .accordion-wrap:hover .accordion-title {
+        color: #4b447e;
+    }
+    .accordion-wrap:hover .accordion-title-wrap {
+        border-bottom: 1px solid #4b447e;
+    }
+    .accordion-wrap:hover svg {
+        stroke: #4b447e
+    }
+    .accordion-title-wrap:hover {
+        cursor: pointer;
+    }
     .accordion-item:hover .img {
         width: 35%;
         height: 100%;
         border-radius: 20px;
         margin: 1.2rem 0;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .accordion-item:hover .acoordion-button {
+        transform: rotate(180deg);
+    }
+    .icon-item:hover {
+        border: 1px solid #737294;
+    }
+    .icon-item:hover .icon-item-link {
+        color: #737294;
     }
 }
