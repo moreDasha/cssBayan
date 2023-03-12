@@ -51,6 +51,11 @@ body {
     align-items: center;
 }
 
+.accordion-label {
+    display: flex;
+    flex-direction: column;
+}
+
 .accordion-title-wrap {
     width: 100%;
     padding: 1.09rem 0;
