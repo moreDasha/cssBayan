@@ -93,6 +93,7 @@ svg {
 }
 .accordion-input{
     appearance: none;
+    -webkit-appearance: none;
 }
 
 .img {
